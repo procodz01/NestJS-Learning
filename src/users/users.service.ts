@@ -1,4 +1,6 @@
+import { Injectable } from "@nestjs/common";
 
+@Injectable()// This decorator marks the class as a service
 export class UserService{
     users: {id: number, name: string, email: string, country: string, isMarried: boolean, gender: string}[] = [
         {id: 1, name: "john", email: "ex@gmaol.com", country: "USA", isMarried: false, gender: "male"},
