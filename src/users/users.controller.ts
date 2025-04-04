@@ -14,7 +14,7 @@ export class UsersController{
     // }
     // userService : UserService;//getting the instance of the service
     constructor(private userService: UserService){// this is how we inject the service in the controller
-        this.userService = new UserService();//getting the instance of the service
+        //getting the instance of the service
     }
 
     // @Get(':id')// decorator to handle GET requests with a parameter
