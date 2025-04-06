@@ -1,6 +1,6 @@
 import { forwardRef,  Inject, Injectable } from "@nestjs/common";
 import { InjectModel } from "@nestjs/mongoose";
-import { Model } from "mongoose";
+import { Model } from "mongoose"; // this is used to create the model for the user schema
 import { AuthService } from "src/auth/auth.service";
 import { User } from "src/schemas/user.schema";
 import { CreateUserDto } from "./dto/create-user.dto";
@@ -8,7 +8,8 @@ import { CreateUserDto } from "./dto/create-user.dto";
 
 @Injectable()
 export class UserService{
-    constructor(@InjectModel(User.name) private userModel: Model<User>){
+    constructor(@InjectModel(User.name) private userModel: Model<User>){ // this is how we inject the model in the service
+        //User.name is used to get the name of the model
 
     }
     async createUser(createUserDto: CreateUserDto){

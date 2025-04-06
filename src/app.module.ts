@@ -18,10 +18,10 @@ import { ConfigModule } from '@nestjs/config';
     AuthModule,
     MongooseModule.forRoot('mongodb+srv://raghvendra:7MVtMX9YXVa%40DZ3@nestjs.0gswqux.mongodb.net/nestjs?retryWrites=true&w=majority', {
       // Optional but recommended configuration options
-      //useNewUrlParser: true,
-      //useUnifiedTopology: true,
-      //serverSelectionTimeoutMS: 5000, // Timeout after 5s if can't connect
-    }),
+      // useNewUrlParser: true,
+      // useUnifiedTopology: true,
+      serverSelectionTimeoutMS: 5000, // Timeout after 5s if can't connect
+    }),// connecting to the mongodb database
   ],
   controllers: [AppController],
   providers: [AppService],
